@@ -4,6 +4,7 @@ import { ThreadWatcher } from './ThreadWatcher';
 import fs from 'fs/promises';
 const twPath = path.join(__dirname, '..', 'data', 'thread_watcher.json');
 
+
 const threadWatcher = new ThreadWatcher(twPath);
 
 const options = {
@@ -41,7 +42,7 @@ const options = {
 			return posts;
 		});	
 
-		const threadPath = path.resolve(__dirname, '..', 'data', thread.id);
+		const threadPath = path.resolve(__dirname, '..', 'data', 'threads', `${thread.id}.json`);
 		await fs.writeFile(threadPath, JSON.stringify(posts));
 
 
