@@ -6,16 +6,20 @@
   "scripts": {
     "start": "node build",
     "build": "tsc",
-		"start:watch": "nodemon build/generate_threads.js",
-		"build:watch": "tsc --watch"
+    "start:watch": "nodemon build/generate_threads.js",
+    "build:watch": "tsc --watch",
+		"generate": "node build/generate_threads.js",
+		"wipe": "rm data/threads/t* && rm data/images/*.{jpg,png}"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^14.1.1"
+    "puppeteer": "^14.1.1",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
+    "@types/shelljs": "^0.8.11",
     "nodemon": "^2.0.16",
     "typescript": "^4.7.2"
   }
