@@ -1,0 +1,22 @@
+{
+  "name": "4chan-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build",
+    "build": "tsc",
+		"start:watch": "nodemon build/generate_threads.js",
+		"build:watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^14.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "typescript": "^4.7.2"
+  }
+}
